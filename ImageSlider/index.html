@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div id="header">
+      <h1 class="h1">IMAGE SLIDER</h1>
+    </div>
+    <div id="main">
+      <div id="prev">
+        <button class="button" id="preBtn">< < <</button>
+      </div>
+      <div id="img">
+        <img src="images/img1.jpg" alt="" id="images" />
+      </div>
+      <div id="nxt">
+        <button class="button" id="nxtBtn">> > ></button>
+      </div>
+    </div>
+    <script>
+      var preObj = document.getElementById("preBtn");
+      var nxtObj = document.getElementById("nxtBtn");
+      var imgObj = document.getElementById("images");
+
+      var imagesList = [
+        "images/img1.jpg",
+        "images/img2.jpg",
+        "images/img3.jpg",
+        "images/img4.jpg",
+        "images/img5.jpg",
+        "images/img6.jpg",
+      ];
+      let len = imagesList.length;
+
+      var i = 0;
+
+      nxtObj.onclick = function () {
+        i++;
+        if (i >= len) {
+          imgObj.src = imagesList[0];
+          i = 0;
+        } else {
+          imgObj.src = imagesList[i];
+        }
+        
+      };
+      preObj.onclick = function () {
+        i--;
+        if (i < 0){
+          imgObj.src = imagesList[len - 1];
+          i = len - 1;
+        }
+        else{
+          imgObj.src = imagesList[i];
+
+        }
+        
+      };
+    </script>
+  </body>
+</html>
