@@ -26,7 +26,7 @@ var btnObj = document.getElementById("totalAmount");
         var amount4Total = quantity4Obj * rate4Obj;
         document.getElementById("amount4").value = amount4Total;
 
-        // fourth row amount calculating
+        // fifth row amount calculating
         var quantity5Obj = document.getElementById("qty5").value;
         var rate5Obj = document.getElementById("rate5").value;
         var amount5Total = quantity5Obj * rate5Obj;
