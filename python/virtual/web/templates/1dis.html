@@ -1,0 +1,13 @@
+{% load static%}
+<link href="{% static '\css\style1.css' %}" rel="stylesheet">
+<body>
+<div class="home">
+    <h2>Welcome </h2>
+<table style ="margin-left:auto;margin-right:auto">
+    <tr>
+<td><a href="{% url 'index'  %}">Portfolio</a></td>
+<td><a href="{% url 'index1'  %}">Contact Form</a></td>
+</tr>
+</table>
+</div>
+</body>
