@@ -29,5 +29,7 @@ urlpatterns = [
     path('', include('portfolio1.urls')),
 
     path('', include('display.urls')),
+    
+    path('', include('daybook.urls')),
    path('', views.cache),
 ]

@@ -1,9 +1,9 @@
 {% load static %}
 <link href="{% static '\css\style1.css' %}" rel="stylesheet">
 <div class="form1">
-  <h2>Contact Form</h2>
+  <h2>Journel Entry</h2>
 
-<form action ="{% url 'submit' %}" method="post">
+<form action ="" method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Submit</button>
