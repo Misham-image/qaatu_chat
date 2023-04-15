@@ -1,7 +1,8 @@
 
 from django.shortcuts import render
 from .models import journels
-from django.views.generic import CreateView,ListView
+from django.views.generic.edit import CreateView
+from django.views.generic import ListView
 from django.urls import reverse_lazy
 def index(request):
     
@@ -13,6 +14,7 @@ class JournelCreateView(CreateView):
     fields =['Products','amount','Invoice','Date']
     template_name = "journel/create.html"
     success_url =reverse_lazy('listjournel')
+
 
 class JournelListView(ListView):
       model = journels

@@ -7,5 +7,7 @@ class journels(models.Model):
     Invoice = models.CharField(max_length=50)
     Date = models.DateField()
 
-class Meta:
-    ordering =['Date']
+
+    class Meta:
+
+        ordering =['Date']
