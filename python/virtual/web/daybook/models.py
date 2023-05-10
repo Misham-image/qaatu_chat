@@ -1,4 +1,5 @@
 from django.db import models
+<<<<<<< HEAD
 from django.contrib.auth.models import User
 
 class userdetails(models.Model):
@@ -11,6 +12,11 @@ class userdetails(models.Model):
 
 class journels(models.Model):
     user1 = models.OneToOneField(User,on_delete=models.CASCADE)
+=======
+
+class journels(models.Model):
+
+>>>>>>> 84c433cfe5ad37f25de32811fd85868ff851981f
     Products = models.CharField(max_length=100)
     amount = models.DecimalField(max_digits=10, decimal_places=2)
     Invoice = models.IntegerField()
