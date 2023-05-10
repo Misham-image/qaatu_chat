@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css'  %}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 border-bottom">
+                    <h4>DayBook</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+
+                </div>
+                <form action ="{% url 'login' %}" method="post">
+                <div class="col-4 card mt-2">
+                       <h5 class="text-center">Login Here</h5>
+                       <div class="form-group mt-2">
+                        <label>Email</label>
+                        <input class="form-control" placeholder="Email" >
+                        
+                       </div>
+                       <div class="form-group">
+                        <label>Password</label>
+                        <input  class="form-control" placeholder="Password" >
+                        
+                       </div> 
+                       
+                        {% csrf_token %}
+                        
+                        <button type="submit">login</button>
+                        
+                      </form>
+                    
+                       <a href="{% url 'register' %}" class="btn btn-default">Register Here</a>
+                </div>
+                <div class="col-4">
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
