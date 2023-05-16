@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 from django.shortcuts import render,redirect
 from .models import journels,userdetails
 from django.views.generic.edit import CreateView
@@ -8,19 +7,11 @@ from django.urls import reverse_lazy
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login
 
-=======
-from django.shortcuts import render
-from .models import journels
-from django.views.generic.edit import CreateView
-from django.views.generic import ListView
-from django.urls import reverse_lazy
->>>>>>> 84c433cfe5ad37f25de32811fd85868ff851981f
 def index(request):
     
     context = {'title': 'Portfolio',}
     return render(request, '1dis.html', context)
 
-<<<<<<< HEAD
 class registerview(CreateView):
     models = userdetails
     fields =['name','mobile','email','password','confirm']
@@ -47,9 +38,6 @@ def login_view(request):
 class JournelCreateView(CreateView):
 
 
-=======
-class JournelCreateView(CreateView):
->>>>>>> 84c433cfe5ad37f25de32811fd85868ff851981f
     model = journels
     fields =['Products','amount','Invoice','Date']
     template_name = "journel/create.html"

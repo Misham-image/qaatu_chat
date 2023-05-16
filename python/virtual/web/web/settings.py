@@ -41,11 +41,8 @@ INSTALLED_APPS = [
     'display',
     'portfolio1',
     'daybook',
-<<<<<<< HEAD
     'medical',
     'rest_framework',
-=======
->>>>>>> 84c433cfe5ad37f25de32811fd85868ff851981f
 ]
 
 MIDDLEWARE = [
